@@ -1,11 +1,10 @@
 "use client";
 
-import Navbar from "../Components/Navbar/Navbar";
+import voyage from "../voyages/[voyageId]/page";
 import "./reservation.css";
 import React, { useState } from "react";
-import Footer from "../Components/Footer/Footer";
 
-function Reservation() {
+function Reservation({voyageId}) {
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
@@ -27,7 +26,7 @@ function Reservation() {
       email: formData.email,
       telephone: formData.telephone,
       statut: {id: 1},
-      voyage: {id: 3}
+      voyage: {id: voyageId}
     };
 
     try {
@@ -60,6 +59,7 @@ function Reservation() {
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
+        <h4 className="title" style={{ textAlign: "center", color: "red" }}>Réservation</h4>
         <div className="flex">
           <label>
             <input
