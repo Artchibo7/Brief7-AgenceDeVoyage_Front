@@ -8,10 +8,10 @@ export default function ListeVoyage(props) {
   const { voyages } = props;
   return (
     <>
-      <p>{props.NomVoyage}</p>
+      <p>Voyages</p>
     <div>
       {voyages && (
-        <ul className="voyages-list">
+        <ul className="voyages-list d-flex flex-wrap gap-3">
           {voyages.map((voyage, index) => (
             <Link key={index} href={"/voyages/" + voyage.id}>
               <li>

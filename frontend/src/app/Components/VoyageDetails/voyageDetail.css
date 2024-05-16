@@ -1,0 +1,7 @@
+.CetteImage {
+    width: 70%;
+    max-width: 666px;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+}

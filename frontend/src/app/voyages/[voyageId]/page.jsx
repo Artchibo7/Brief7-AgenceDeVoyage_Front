@@ -39,7 +39,7 @@ export default function voyage(props) {
           DateRetour={voyage.DateRetour}
           Description={voyage.Description}
           prix={voyage.prix}
-          // image={voyage.Destination.image}
+          image={voyage.destination.image}
           voyageId={voyage.id}
         />
         

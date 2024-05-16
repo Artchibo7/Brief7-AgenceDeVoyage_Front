@@ -11,13 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-       {/* <Image
-          className="voyage-details-image"
-          width={250}
-          height={250}
-          src="/public/img/allmonde.jpg"
-          alt="Image de monde"
-        /> */}
+      <div className="carteImage"></div>
       <Footer />
     </>
   );

@@ -16,15 +16,16 @@ export default function VoyageDetail(props) {
   } = props;
   return (
     <>
+    <div className="container mt-5 mb-5 text-center d-flex justify-content-center">
         <div className="card">
           {props.image && (
-            <img
-              className="voyage-details-image"
-              width={250}
-              height={250}
-              src={voyageId.Destination.image}
-              alt={"Image de " + NomVoyage}
-            />
+            <div className="CetteImage">
+              <img
+                className="CetteImage"
+                src={image}
+                alt={"Image de " + NomVoyage}
+              />
+            </div>
           )}
           <div className="card-body">
             <h5
@@ -38,12 +39,11 @@ export default function VoyageDetail(props) {
             <p className="voyage-details-date">Date de depart {DateDepart}</p>
             <p className="voyage-details-date">Date de retour {DateRetour}</p>
             <p className="voyage-details-prix">Le prix {prix} €</p>
-            <a href="/destination" className="btn btn-primary">
-              Retour vers les destinations
-            </a>
+
           </div>
         </div>
       <Reservation voyageId={voyageId} />
+    </div>
     </>
   );
 }
